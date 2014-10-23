@@ -1,6 +1,6 @@
 #import "GamePlayScene.h"
 #import "Character.h"
-//#import "Obstacle.h"
+#import "Obstacle.h"
 
 @implementation GamePlayScene
 
@@ -9,6 +9,7 @@
     // your code here
     character = (Character*)[CCBReader load:@"Character"];
     [physicsNode addChild:character];
+    [self addObstacle];
 }
 
 -(void)update:(CCTime)delta
